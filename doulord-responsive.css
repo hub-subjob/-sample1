@@ -1,0 +1,297 @@
+
+ /* ipad向けレイアウト */
+@media all and (max-width: 1000px) {
+  .header-list{
+    display:none;
+   }
+  .logo{
+    display:none;
+   }
+  .menuber{
+    display: block;
+
+  }
+  .topback{
+    display:inline-block;
+  }
+  body {
+    background: rgb(242, 201, 52);
+    margin: 0;
+    font-family: arial;
+    width: 100vw;
+    height: 100vh;
+    animation: bugfix infinite 1s;
+    -webkit-animation: bugfix infinite 1s;
+  }
+  
+  @keyframes bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
+  @-webkit-keyframes bugfix {
+    from {
+      padding: 0;
+    }
+    to {
+      padding: 0;
+    }
+  }
+  #overlay-button {
+    position: absolute;
+    left:10px;
+    top: 0px;
+    padding: 26px 11px;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+  }
+  #overlay-button span {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: rgb(188, 188, 188);
+    position: relative;
+    display: block;
+    transition: all .2s ease-in-out;
+  }
+  #overlay-button span:before {
+    top: -10px;
+    visibility: visible;
+  }
+  #overlay-button span:after {
+    top: 10px;
+  }
+  #overlay-button span:before, #overlay-button span:after {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: rgb(187, 187, 187);
+    position: absolute;
+    content: "";
+    transition: all .2s ease-in-out;
+  }
+  #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+    background: #fff;
+  }
+  
+  input[type=checkbox] {
+    display: none; 
+    
+  }
+  
+  input[type=checkbox]:checked ~ #overlay {
+    visibility: visible; 
+  }
+  
+  input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+    background: transparent;
+    
+    
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+  
+  }
+  input[type=checkbox]:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+  
+  
+  }
+  
+  #overlay {
+    height: 100vh;
+    width: 100vw;
+    background: #ec6451;
+    z-index: 2;
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+  }
+  #overlay ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  #overlay ul li {
+    padding: 1em;
+  }
+  #overlay ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  #overlay ul li a:hover {
+    color: #000!important;
+  }
+}
+  /* iphone向けレイアウト */
+  @media all and (max-width: 670px) {
+    .header-list{
+      display:none;
+     }
+    .logo{
+      display:none;
+     }
+    .menuber{
+      display: block;
+  
+    }
+      body {
+        background: rgb(242, 201, 52);
+        margin: 0;
+        font-family: arial;
+        width: 100vw;
+        height: 100vh;
+        animation: bugfix infinite 1s;
+        -webkit-animation: bugfix infinite 1s;
+      }
+    .top-left{
+      padding-left:10px;
+    }
+
+    
+    @keyframes bugfix {
+      from {
+        padding: 0;
+      }
+      to {
+        padding: 0;
+      }
+    }
+    @-webkit-keyframes bugfix {
+      from {
+        padding: 0;
+      }
+      to {
+        padding: 0;
+      }
+    }
+    #overlay-button {
+      position: absolute;
+      left:10px;
+      top: 0px;
+      padding: 26px 11px;
+      z-index: 5;
+      cursor: pointer;
+      user-select: none;
+    }
+    #overlay-button span {
+      height: 4px;
+      width: 35px;
+      border-radius: 2px;
+      background-color: rgb(188, 188, 188);
+      position: relative;
+      display: block;
+      transition: all .2s ease-in-out;
+    }
+    #overlay-button span:before {
+      top: -10px;
+      visibility: visible;
+    }
+    #overlay-button span:after {
+      top: 10px;
+    }
+    #overlay-button span:before, #overlay-button span:after {
+      height: 4px;
+      width: 35px;
+      border-radius: 2px;
+      background-color: rgb(187, 187, 187);
+      position: absolute;
+      content: "";
+      transition: all .2s ease-in-out;
+    }
+    #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+      background: #fff;
+    }
+    
+    input[type=checkbox] {
+      display: none; 
+      
+    }
+    
+    input[type=checkbox]:checked ~ #overlay {
+      visibility: visible; 
+    }
+    
+    input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+      background: transparent;
+      
+      
+    }
+    input[type=checkbox]:checked ~ #overlay-button span:before {
+      transform: rotate(45deg) translate(7px, 7px);
+    
+    }
+    input[type=checkbox]:checked ~ #overlay-button span:after {
+      transform: rotate(-45deg) translate(7px, -7px);
+    
+    
+    }
+    
+    #overlay {
+      height: 100vh;
+      width: 100vw;
+      background: #ec6451;
+      z-index: 2;
+      visibility: hidden;
+      position: fixed;
+    }
+    #overlay ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      padding-left: 0;
+      list-style-type: none;
+    }
+    #overlay ul li {
+      padding: 1em;
+    }
+    #overlay ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+    #overlay ul li a:hover {
+      color: #000!important;
+    }
+    .dowlord{
+      display:none;
+    }
+    .dowlord1{
+      display:inline-block;
+    font-size: 15px;
+    padding:5px 10px;
+    color: #000000;
+    }
+  .dowlord1:hover{
+    transition: all 1s;
+    color:#000000;
+    letter-spacing:2px;
+    }
+  .box2{
+    font-size:15px;
+    overflow-wrap:normal;
+  
+  }
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+}
+.footer-right{
+  padding-top:20px;
+}
+
+  } 
