@@ -1,0 +1,395 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN";
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+/* -------------------- CSSスタート -------------------- */
+
+main{
+  background-color:rgb(242, 201, 52);
+  width: 100%;
+}
+/* バウンススクロール時のカラースタイル */
+body::before,
+body::after {
+content: "";
+display: block;
+width: 100%;
+height: 50%;
+position: fixed;
+left: 0;
+z-index: -1;
+}
+body::before {
+top: 0;
+background-color: rgb(242, 201, 52);
+}
+body::after {
+bottom: 0;
+background-color: rgb(47, 100, 82);
+} 
+.maintop{
+  width: 95%;
+  margin: 0 auto;
+  padding:60px 0;
+}
+.topback{
+  display:none;
+}
+.top-left a{
+  color:#000000;
+  font-size:20px;
+  position: relative;
+}
+.top-left a::after {
+  background-color: currentColor;
+  bottom: -6px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .1s;
+  width: 100%;
+}
+.top-left a:hover::after{
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.top-left h3{
+  text-align: center;
+  font-size: 30px;
+}
+.content{
+  width:100%;
+  display:flex;
+  justify-content: space-around; 
+  position:fixed;
+  height:60px;
+  z-index:1;
+}
+.header-left{
+  background-color:rgb(242, 201, 52);
+  width:50%;
+  display:flex;
+}
+.header-list{
+  display:flex;
+}
+.menuber{
+  display:none;
+}
+
+.header-list a{
+  padding:20px 10px;
+  text-align:center;
+  color:rgb(0, 0, 0);
+  font-size:15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.toplist:hover{
+  display  : inline-block;
+  animation: rollkAnime 0.7s linear ;
+}
+@keyframes rollkAnime{
+  50% {
+        transform: rotateX(180deg);
+      }
+ 100% {
+        transform: rotateX(360deg);
+      }
+}
+.header-right{
+  width:50%;
+  background-color:rgb(242, 201, 52);
+  font-size     : 20pt;        /* 文字サイズ */
+  padding:10px 5px;
+  text-align:end;
+}
+.dowlord{
+  display       : inline-block;
+  cursor        : pointer;     /* カーソル   */
+  color         : #000000;     /* 文字色     */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding:5px 30px 5px 0;
+  color: rgb(0, 0, 0);
+}
+.dowlord1{
+  display:none;
+}
+.dowlord:hover{
+  transition: all 1s;
+  color:#000000;
+  letter-spacing:2px;
+}
+.logo{
+  height:30px;
+  width:30px;
+  margin:auto 10px auto 20px;
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box2 {
+  background-color: rgb(242, 201, 52);
+  position   : relative;
+  width:100%;
+  height:50px;
+  line-height:50px;
+  font-size:x-large;
+  overflow   : hidden;
+  text-align: center;
+  border-top:1px solid #000000;
+  border-left:1px solid #000000;
+  border-right:1px solid #000000;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.box2 .bgImg {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box2 .src5 {
+  animation-delay  : 0s;
+}
+.box2 .src6 {
+  animation-delay  : 5s;
+
+}
+.box2 .src7 {
+  animation-delay  : 10s;
+
+}
+.box2 .src8 {
+  animation-delay  : 15s;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+
+.btn{
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  padding:0 20px;
+}
+.sample2{
+  width:100%;
+  margin-bottom:10px;
+  border:1px solid #000000;
+}
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box {
+  position   : relative;
+  width:100%;
+  height:0;
+  padding-top: 56%;
+  margin-bottom: 10px;
+  overflow   : hidden;
+  border:1px solid #000000;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.box .bgImg {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .src1 {
+  background-image : url(https://user0514.cdnw.net/shared/img/thumb/gori_5101644_TP_V.jpg);   /* 背景の画像を指定 */
+  background-size: cover;
+  background-position: center;
+}
+.box .src2 {
+  background-image : url(https://user0514.cdnw.net/shared/img/thumb/Mongolia010A1502_TP_V.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 5s;
+  background-size: cover;
+  background-position: center;
+}
+.box .src3 {
+  background-image : url(https://user0514.cdnw.net/shared/img/thumb/YAMA_DSC0728_TP_V.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 10s;
+  background-size: cover;
+  background-position: center;
+}
+.box .src4 {
+  background-image : url(https://user0514.cdnw.net/shared/img/thumb/PAK85_karaagetoremon20150203190125_TP_V.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 15s;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+.main1{
+  display: flex;
+  flex-direction:column; 
+  color:#ffffff;
+  padding-right:2%;
+  white-space:nowrap;
+  flex-grow:1;
+}
+.main-map{
+  flex-grow:4;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-map iframe {
+  width: 100%;
+  height: calc(100% + 63px);
+  margin-top: -63px;
+}
+.maintop{
+  width: 95%;
+  margin: 0 auto;
+  padding:60px 0;
+  display: flex;
+  justify-content:space-around; 
+}
+.topback{
+  display:none;
+}
+.top-left a{
+  color:#000000;
+  font-size:20px;
+  position: relative;
+}
+.top-left a::after {
+  background-color: currentColor;
+  bottom: -6px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .1s;
+  width: 100%;
+}
+.top-left a:hover::after{
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.top-left h3{
+  text-align: center;
+  font-size: 30px;
+}
+.main1-1{
+  padding-top:10px;
+  border-bottom:2px solid rgb(126, 126, 126);
+  color:#000000;
+  font-size:25px;
+  text-align: center;
+}
+.main1-1 h3{
+  margin-bottom: 5px;
+}
+.main1-2 p{
+  margin-top:0px;
+  margin-bottom:30px;
+}
+.main1-2 h3{
+  margin-bottom: 0px;
+}
+.main1-2{
+  color: #000000;
+}
+.google-map{
+width:100%;
+height:100%;
+
+}
+.xxx{
+  margin-bottom:0;
+}
+footer{
+  background-color: rgb(47, 100, 82);
+  padding-top:10px;
+  color: #ffffff;
+  text-align: center;
+}
+.footer-content{
+  display: flex;
+  justify-content: space-around;
+  padding:20px 0px 30px 0;
+  border-bottom:1px solid #00000048;
+}
+
+.button2 {
+  display       : inline-block;
+  border-radius : 50px;          /* 角丸       */
+  font-size     : 15pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 50px;   /* 余白       */
+  background    : rgba(89, 179, 0, 0.83);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid rgba(89, 179, 0, 0.83);    /* 枠の指定 */
+}
+.button2:hover {
+  color         : rgba(89, 179, 0, 0.83);     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+.email{
+  font-size:130%;
+  border-radius: 30px;
+}
+.button1 {
+  display       : inline-block;
+  border-radius : 10px;          /* 角丸       */
+  font-size     : 13pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 6px 12px;   /* 余白       */
+  background    : #00b300;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #00b300;    /* 枠の指定 */
+}
+.button1:hover {
+  background-color: #009600;
+  border-color: #009600;
+  color         : #000000;     /* 背景色     */
+}
+.footer-down h1{
+  margin:0;
+  font-size:10vw;
+  @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+  font-family: 'Sacramento', cursive;
+}
