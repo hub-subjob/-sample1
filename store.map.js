@@ -13,7 +13,7 @@
        const map = new Map(document.getElementById("map"), {
          zoom: 12,
          center: { lat: 35.702534450118954, lng: 140.0382679733375 },
-         mapId: "db1d94181ca6feb7",
+         mapId: "",
        });
        
        //マーカー情報を入力
