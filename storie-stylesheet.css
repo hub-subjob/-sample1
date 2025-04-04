@@ -10,6 +10,9 @@
   a {
     text-decoration: none;
   }
+  li{
+    list-style: none;
+  }
 
 /* -------------------- CSSスタート -------------------- */
 main{
@@ -202,7 +205,7 @@ background-color: rgb(47, 100, 82);
   margin-top:0px;
   margin-bottom:30px;
 }
-.main1-2 h3{
+.main1-2 li{
   margin-bottom: 0px;
 }
 .main1-2{
@@ -324,4 +327,13 @@ footer{
   font-size:10vw;
   @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
   font-family: 'Sacramento', cursive;
+}
+
+/*js関係のCSS*/
+.tab__menu-item.is-active{
+  background-color: rgb(255, 225, 0);
+  color: #000000;
+}
+.delete{
+  display:none;
 }
